@@ -109,10 +109,11 @@ h1 {
 
 .tab-btn {
     background: transparent;
-    border: 1px solid var(--sage);
+    border: 2px solid var(--sage);
     color: var(--sage-dark);
     padding: 10px 24px;
     font-size: 0.95rem;
+    font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
     border-radius: 25px;
