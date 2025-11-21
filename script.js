@@ -78,7 +78,7 @@ function initFallingLeaves() {
 
     const leaves = [];
     let leafIdCounter = 0;
-    const MAX_LEAVES = 7; // Maximum number of leaves on screen at once
+    const MAX_LEAVES = 4; // Maximum number of leaves on screen at once
 
     // Create a new leaf
     function createLeaf() {
