@@ -78,9 +78,14 @@ function initFallingLeaves() {
 
     const leaves = [];
     let leafIdCounter = 0;
+    const MAX_LEAVES = 7; // Maximum number of leaves on screen at once
 
     // Create a new leaf
     function createLeaf() {
+        // Don't create new leaf if we're at the maximum
+        if (leaves.length >= MAX_LEAVES) {
+            return null;
+        }
         const leafData = leafImages[Math.floor(Math.random() * leafImages.length)];
         const size = Math.random() * 25 + 35; // 35-60px (smaller)
         

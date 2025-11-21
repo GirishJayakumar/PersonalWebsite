@@ -55,12 +55,28 @@ header {
     padding-top: 20px;
 }
 
+.header-content {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
 h1 {
     font-size: 3rem;
     font-weight: 300;
     letter-spacing: -1px;
     color: var(--text);
     margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
 }
 
 .tagline {
@@ -77,9 +93,9 @@ h1 {
     font-style: italic;
     margin-top: 15px;
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
     line-height: 1.6;
+    text-align: center;
+    width: 100%;
 }
 
 /* Tabs */
@@ -179,6 +195,24 @@ h1 {
 .centered-content {
     text-align: center;
     width: 100%;
+}
+
+.profile-image {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 60% center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    border: 4px solid rgba(156, 175, 136, 0.3);
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+    border-color: var(--sage);
 }
 
 .contact-info-top {
@@ -499,6 +533,11 @@ html {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
     h1 {
         font-size: 2rem;
     }
